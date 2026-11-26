@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav class="navbar"> 
+    <nav class="navbar">
         <div class="logo">SENAI</div>
+
+        <button class="menu-toggle" aria-label="Abrir menu"> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
         <ul class="nav-links">
             <li><a href="#">Ínicio</a></li>
@@ -31,13 +39,13 @@
             </div>
         </section>
 
-        <section class="conteudo"> 
+        <section class="conteudo">
             <h2>O que você vai aprender</h2>
-            <div class="card"> 
+            <div class="card">
                 <h3>HTML</h3>
                 <p>Estruturação de páginas com semantica e boas práticas.</p>
             </div>
-            <div class="card"> 
+            <div class="card">
                 <h3>CSS</h3>
                 <p>Estilização moderna com cores, fontes e layout responsivo.</p>
             </div>
@@ -46,7 +54,111 @@
                 <p>Interatividade e lógica com manipulação de eventos e DOM.</p>
             </div>
         </section>
+
+        <section class="depoimentos">
+            <h2>O que dizem nossos alunos</h2>
+            <div class="depoimento-grid">
+                <div class="depoimento">
+                    <img src="assets/aluno1.jpg" alt="Foto do João">
+                    <p>"Aprender frontend ficou muito mais fácil com esse projeto. Agora consigo criar minhas próprias
+                        páginas!"</p>
+                    <span>João Pereira</span>
+                </div>
+                <div class="depoimento">
+                    <img src="assets/aluno2.jpg" alt="Foto da Maria">
+                    <p>"As explicações são diretas e os exemplos me ajudaram a entender o que eu achava impossível."</p>
+                    <span>Maria Oliveira</span>
+                </div>
+                <div class="depoimento">
+                    <img src="assets/aluno3.png" alt="Foto da Ana">
+                    <p>"O projeto me deu confiança para montar meu portifólio e participar de processos seletivos."</p>
+                    <span>Ana Costa</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="exemplos"> 
+            <h2>Exemplos Práticos</h2>
+
+            <p class="exemplos-descricao"> veja alguns projetos criados com os conceitos aprendidos nas aulas.</p>
+
+            <div class="exemplos-grid"> 
+
+                <div class="exemplo-card"> 
+                    <img src="assets/exemplo1.jpg" alt="Exemplo de página HTML">
+                    <h3>Portfólio Pessoal</h3>
+                    <p>Site de apresentação com HTML semâtico e estilização com CSS moderno</p>
+                </div>
+
+                <div class="exemplo-card"> 
+                    <img src="assets/exemplo2.jpg" alt="Exemplo de cardápio digital">
+                    <h3>Cardápio Digital</h3>
+                    <p>Peojeto interativo com botõ e imagens simulando um site de lanchonete</p>
+                </div>
+
+                <div class="exemplo-card">
+                    <img src="assets/exemplo3.jpg" alt="Exemplo de conversor de moedas">
+                    <h3>Conversor de moedas</h3>
+                    <p>Pequena aplicação com JavaScript para calcular converções em tempo real.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="aprendizado"> 
+
+            <h2>Como Funciona o Aprendizado</h2>
+
+            <p class="aprendizado-descrição"> 
+                Veja o passo a passo que você vai seguir para dominar o desenvolvimento Frontend.
+            </p>
+            <div class="etapas">
+                <span class="numero">1</span>
+
+            </div class="etapa-conteudo"> 
+                <h3>Fundamentos de HTML</h3>
+                <p>Aprenda a estruturar páginas com semântica, acessibilidade e boas práticas.</p>
+            </div>
+        </div>
+
+        <div class="etapa"> 
+            <span class="numero">2</span>
+
+            <div class="etapa-conteudo"> 
+                <h3>Estalização com CSS</h3>
+                <p>Crie layouts modernos com cores, fontes, espaçamentos e responsividade </p>
+            </div>
+        </div>
+
+        <div class="etapa"> 
+            <span class="numero">3</span>
+
+            <div class="etapa-conteudo"> 
+                <h3>Interatividade com JavaScript</h3>
+                <p>Adicione vida à sua página com eventos, manipulação de DOM e lógica de programação.</p>
+            </div>
+        </div>
+
+        <div class="etapa"> 
+            <span class="numero">4</span>
+
+            <div class="etapa-conteudo"> 
+                <h3>Projeto Final</h3>
+                <p>Coloque tudo em prética desenvolvendo um site completo e visualmente atrativo.</p>
+            </div>
+        </div>
+        </section>
     </main>
-    
+
+    <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            navLinks.classList.toggle("show");
+        });
+    </script>
+
 </body>
+
 </html>
